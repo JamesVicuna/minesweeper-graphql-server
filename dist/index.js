@@ -3,30 +3,6 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import gql from "graphql-tag";
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
-const books = [
-    {
-        title: "The Awakening",
-        author: "Kate Chopin",
-    },
-    {
-        title: "City of Glass",
-        author: "Paul Auster",
-    },
-];
-// const typeDefs = gql`
-//   type Book {
-//     title: String
-//     author: String
-//   }
-//   type Query {
-//     books: [Book]
-//   }
-// `;
-// const resolvers = {
-//   Query: {
-//     books: () => books,
-//   },
-// };
 const typeDefs = gql `
   type Game {
     id: ID!
